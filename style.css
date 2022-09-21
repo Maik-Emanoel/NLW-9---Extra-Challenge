@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #ffffff;
+  --paragraph-color:#C1C1C1;
+
+
+  font-size: 62.5%;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: rgb(2,11,16);
+  background: linear-gradient(93deg, rgba(2,11,16,1) 0%, rgba(1,39,48,1) 98%);
+
+  user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =================== HEADER ============== */
+header {
+  display: flex;
+  justify-content: center;
+
+  margin: 32px auto;
+}
+
+header div {
+  width: 120px;
+  height: 120px;
+
+  background: linear-gradient(90deg, rgba(90,58,180,1) 0%, rgba(29,131,253,1) 65%, rgba(69,252,93,1) 100%);
+  border-radius: 50%;
+  padding: 3px;
+
+  transition: all .3s ease-in-out;
+}
+
+header div:hover {
+  transform: scale(1.13);
+}
+
+header img {
+  width: 100%;
+  border-radius: 50%;
+}
+/* ============== main ============= */
+
+main {
+  max-width: 58rem;
+  width: 85%;
+
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ============== section =============== */
+section {
+  background: linear-gradient(90deg, rgba(90,58,180,1) 0%, rgba(29,131,253,1) 50%, rgba(69,252,93,1) 100%);
+  padding-top: 4px;
+  border-radius: 12px;
+}
+
+section div {
+  background: #0a1417;
+  box-shadow: 11px 15px 29px -15px rgba(0,0,2,0.65);
+  padding: 32px;
+  border-radius: 10px;
+}
+
+section h2 {
+  font-size: 2.4rem;
+  line-height: 38.4px;
+  color: var(--text-color);
+}
+
+section p {
+  font-size: 1.6rem;
+  line-height: 25.6px;
+  color: var(--paragraph-color);
+
+  margin-bottom: 2.4rem;
+}
+
+section .title {
+  text-align: center;
+  line-height: 17px;
+  margin: 15px 0;
+  font-size: 1.35rem;
+}
+
+/* ================ ul's ================= */
+
+.moviesList,
+.seriesList {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.moviesList,
+.seriesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.moviesList li,
+.seriesList li {
+  transition: all .3s ease-in-out;
+}
+
+.moviesList li:hover,
+.seriesList li:hover {
+  transform: scale(1.1);
+}
+
+.seriesList li {
+  cursor: pointer;
+}
+
+ul li img {
+  width: 10rem;
+  border-radius: 8px;
+}
+
+ul li .title {
+  max-width: 10rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.socialLinks li {
+  transition: all .3s ease;
+}
+
+.socialLinks li:hover {
+  transform: translateY(-5px);
+}
+
+.socialLinks li:nth-of-type(1):hover svg path {
+  stroke: #2871FF;
+}
+
+.socialLinks li:nth-of-type(2):hover svg path {
+  stroke: #FA41FE;
+}
+
+.socialLinks li:nth-of-type(3):hover svg path {
+  stroke: #F40000;
+}
+
+/* ============ footer ============= */
+footer {
+  margin: 32px auto 19px;
+  width: 10rem;
+}
+
+footer,
+footer a {
+  text-decoration: none;
+  color: var(--paragraph-color);
+  opacity: 0.9;
+}
+
+/* ================ RESPONSIVIDADE ================= */
+
+@media (max-width: 465px) {
+  section div {
+    padding-inline: 25px;
+  }
+
+  .moviesList,
+  .seriesList {
+    place-items: center;
+    gap: 12px;
+  }
+
+  .moviesList li,
+  .seriesList li {
+    height: 220px;
+    margin: 8px auto;
+  }
+}
+
+/* ================ animation ============== */
+@keyframes fromRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+header div{
+   animation: fromRight 2s .4s backwards;
+}
+
+section{
+  animation: fromRight 2s backwards
+}
+
+section:nth-child(1) {
+  animation-delay: .4s;
+}
+
+section:nth-child(2) {
+  animation-delay: 1s;
+}
+
+section:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+/* =========== scroll bar ============ */
+
+body::-webkit-scrollbar{
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track{
+  background: rgb(2,11,16);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #0a1417;
+  border-radius: 3px;
+}
+
