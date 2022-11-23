@@ -87,6 +87,7 @@ section div {
   background: #0a1417;
   box-shadow: 11px 15px 29px -15px rgba(0,0,2,0.65);
   padding: 32px;
+  padding-left: 26px;
   border-radius: 10px;
 }
 
@@ -102,6 +103,28 @@ section p {
   color: var(--paragraph-color);
 
   margin-bottom: 2.4rem;
+}
+
+section div ul {
+  padding-top: 12px;
+  padding-left: 6px;
+
+  max-height: 235px;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+section div ul::-webkit-scrollbar{
+  width: 2px;
+}
+
+section div ul::-webkit-scrollbar-track{
+  background: #0a1417;
+}
+
+section div ul::-webkit-scrollbar-thumb {
+  background: rgb(2,11,16);
+  border-radius: 3px;
 }
 
 section .title {
@@ -204,6 +227,22 @@ footer a {
   .seriesList li {
     height: 220px;
     margin: 8px auto;
+  }
+}
+
+@media (max-width: 320px) {
+  section div {
+    padding-inline: 10px;
+  }
+
+  section div h2,
+  section div p{
+    padding-inline: 15px;
+  }
+
+  section div ul {
+    max-height: 470px;
+    padding-right: 15px;
   }
 }
 
