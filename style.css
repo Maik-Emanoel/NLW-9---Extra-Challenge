@@ -115,16 +115,7 @@ section div ul {
 }
 
 section div ul::-webkit-scrollbar{
-  width: 2px;
-}
-
-section div ul::-webkit-scrollbar-track{
-  background: #0a1417;
-}
-
-section div ul::-webkit-scrollbar-thumb {
-  background: rgb(2,11,16);
-  border-radius: 3px;
+  width: 0px;
 }
 
 section .title {
@@ -286,11 +277,11 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-track{
-  background: rgb(2,11,16);
+  background: rgba(1,39,48,1);
 }
 
 body::-webkit-scrollbar-thumb {
   background: #0a1417;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
